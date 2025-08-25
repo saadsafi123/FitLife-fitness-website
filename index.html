@@ -316,7 +316,7 @@
             
             <div class="row text-center">
                 <div class="col">
-                    <p style="color: var(--text-muted); margin-bottom: 0;">© 2024 FitLife. Transform Your Body, Elevate Your Mind.</p>
+                    <p style="color: var(--text-muted); margin-bottom: 0;">© <span id="year"></span> FitLife. Transform Your Body, Elevate Your Mind.</p>
                 </div>
             </div>
         </div>
@@ -519,6 +519,8 @@
         });
 
         counterElements.forEach(el => counterObserver.observe(el));
+
+        document.getElementById("year").textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
